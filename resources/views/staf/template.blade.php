@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-  <!-- Title -->
+
   <style type="text/css">
 .imgR{
   width: 200px;
@@ -17,6 +17,7 @@
    width: 200px;
 }
   </style>
+  <!-- Title -->
   <title>Helpdesk | @yield('title')</title>
 
   <!-- Required Meta Tags Always Come First -->
@@ -59,8 +60,6 @@
 
   <!-- CSS Customization -->
   <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
-
-  <link rel="stylesheet" href="{{asset('datetime/css/bootstrap-material-datetimepicker.css')}}">
 </head>
 
 <body>
@@ -72,9 +71,10 @@
           <!-- Logo -->
           <a href="index.html" class="navbar-brand d-flex align-self-center g-hidden-xs-down g-line-height-1 py-0 g-mt-5">
 
-           <div class="imgR">
+             <div class="imgR">
                    <img src="http://210.57.212.42/assets/img/unair-logogram-white.png">
                  </div> 
+
 
 
           </a>
@@ -342,7 +342,7 @@
                
                
                 <li class="mb-0">
-                  <a class="media g-color-lightred-v2--hover g-py-5 g-px-20" href="/logout">
+                  <a class="media g-color-lightred-v2--hover g-py-5 g-px-20" href="#!">
                     <span class="d-flex align-self-center g-mr-12">
           <i class="hs-admin-shift-right"></i>
         </span>
@@ -735,14 +735,18 @@
         <ul id="sideNavMenu" class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
 
         <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
-            <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12" href="/kasie/dashboard">
+            <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12" href="/staf/dashboard">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
       <i class="hs-admin-pie-chart"></i>
     </span>
               <span class="media-body align-self-center">Dashboard</span>
             </a>
           </li>
+          <!-- Panels/Cards -->
          
+
+          
+
           <!-- End Panels/Cards -->
 <!-- Tables -->
           <li class="u-sidebar-navigation-v1-menu-item u-side-nav--has-sub-menu u-side-nav--top-level-menu-item">
@@ -761,37 +765,12 @@
             <!-- Tables: Submenu-1 -->
             <ul id="subMenu8" class="u-sidebar-navigation-v1-menu u-side-nav--second-level-menu mb-0">
               <!-- Basic Tables -->
-              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/beri_intruksi">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-          <i class="hs-admin-control-record"></i>
-        </span>
-                  <span class="media-body align-self-center">Beri Intruksi</span>
-                </a>
-              </li>
+             
               <!-- End Basic Tables -->
 
               <!-- Table Designs -->
               <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/data_intruksi">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-          <i class="hs-admin-control-record"></i>
-        </span>
-                  <span class="media-body align-self-center">Data Intruksi</span>
-                </a>
-              </li>
-
-              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/izin_bantuan">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-          <i class="hs-admin-control-record"></i>
-        </span>
-                  <span class="media-body align-self-center">Izin Bantuan</span>
-                </a>
-              </li>
-
-               <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/perintah_intruksi">
+                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/staf/intruksi">
                   <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
           <i class="hs-admin-control-record"></i>
         </span>
@@ -804,7 +783,44 @@
           </li>
           <!-- End Tables -->
          
+<li class="u-sidebar-navigation-v1-menu-item u-side-nav--has-sub-menu u-side-nav--top-level-menu-item">
+            <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12" href="#!" data-hssm-target="#subMenu2">
+              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
+      <i class="hs-admin-desktop"></i>
+    </span>
+              <span class="media-body align-self-center">Swalayan</span>
+              <span class="d-flex align-self-center u-side-nav--control-icon">
+      <i class="hs-admin-angle-right"></i>
+    </span>
+              <span class="u-side-nav--has-sub-menu__indicator"></span>
+            </a>
 
+            <!-- Layouts Settings: Submenu-1 -->
+            <ul id="subMenu2" class="u-sidebar-navigation-v1-menu u-side-nav--second-level-menu mb-0">
+              <!-- Header Static -->
+              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
+                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="layout-settings/header-static.html">
+                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
+          <i class="hs-admin-control-record"></i>
+        </span>
+                  <span class="media-body align-self-center">Data Usulan</span>
+                </a>
+              </li>
+              <!-- End Header Static -->
+
+             
+              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
+                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="layout-settings/layout-light-body-v2.html">
+                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
+          <i class="hs-admin-control-record"></i>
+        </span>
+                  <span class="media-body align-self-center">Data Task</span>
+                </a>
+              </li>
+              <!-- End Light Layout: body v.2 -->
+            </ul>
+            <!-- End Layouts Settings: Submenu-1 -->
+          </li>
           <!-- End Layouts Settings -->
 
 
@@ -871,8 +887,6 @@
   <script src="{{asset('assets/js/helpers/hs.focus-state.js')}}"></script>
   <script src="{{asset('admin-template/assets/js/components/hs.popup.js')}}"></script>
   <script src="{{asset('admin-template/assets/js/components/hs.datatables.js')}}"></script>
-  
-  <script src="{{asset('datetime/js/bootstrap-material-datetimepicker.js')}}"></script>
  
 
 
@@ -932,7 +946,7 @@
   
       // initialization of custom scrollbar
       $.HSCore.components.HSScrollBar.init($('.js-custom-scroll'));
-       
+  
       // initialization of popups
       $.HSCore.components.HSPopup.init('.js-fancybox', {
         btnTpl: {

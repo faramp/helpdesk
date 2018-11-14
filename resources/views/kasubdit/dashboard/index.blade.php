@@ -1,5 +1,5 @@
 
-@extends('kasie.template')
+@extends('kasubdit.template')
 @section('title', 'Dashboard')
 @section('content')
 
@@ -8,7 +8,7 @@
 
 
         <div class="g-pa-20">
- <h3 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">Intruksi Saya</h3>
+ <h3 class="d-flex align-self-center text-uppercase g-font-size-12 g-font-size-default--md g-color-black mb-0">Perintah Intruksi</h3>
  <br>
           <div class="row">
 
@@ -26,7 +26,7 @@
 
                     <div class="media-body align-self-center">
                       <div class="d-flex align-items-center g-mb-5">
-                        <span class="g-font-size-24 g-line-height-1 g-color-black"><?php echo $intruksi_saya_belum_selesai ?></span>
+                        <span class="g-font-size-24 g-line-height-1 g-color-black">0</span>
                         <span class="d-flex align-self-center g-font-size-0 g-ml-5 g-ml-10--md">
                       <i class="g-fill-gray-dark-v9">
                         <svg width="12px" height="20px" viewbox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -80,7 +80,7 @@
 
                     <div class="media-body align-self-center">
                       <div class="d-flex align-items-center g-mb-5">
-                        <span class="g-font-size-24 g-line-height-1 g-color-black"><?php echo $intruksi_saya_menunggu_penilaian ?></span>
+                        <span class="g-font-size-24 g-line-height-1 g-color-black">0</span>
                         <span class="d-flex align-self-center g-font-size-0 g-ml-5 g-ml-10--md">
                       <i class="g-fill-gray-dark-v9">
                         <svg width="12px" height="20px" viewbox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -134,7 +134,7 @@
 
                     <div class="media-body align-self-center">
                       <div class="d-flex align-items-center g-mb-5">
-                        <span class="g-font-size-24 g-line-height-1 g-color-black"><?php echo $intruksi_saya_revisi ?></span>
+                        <span class="g-font-size-24 g-line-height-1 g-color-black">0</span>
                         <span class="d-flex align-self-center g-font-size-0 g-ml-5 g-ml-10--md">
                       <i class="g-fill-red">
                         <svg width="12px" height="20px" viewbox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -188,7 +188,7 @@
 
                     <div class="media-body align-self-center">
                       <div class="d-flex align-items-center g-mb-5">
-                        <span class="g-font-size-24 g-line-height-1 g-color-black"><?php echo $intruksi_saya_selesai ?></span>
+                        <span class="g-font-size-24 g-line-height-1 g-color-black">0</span>
                         <span class="d-flex align-self-center g-font-size-0 g-ml-5 g-ml-10--md">
                       <i class="g-fill-gray-dark-v9">
                         <svg width="12px" height="20px" viewbox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
