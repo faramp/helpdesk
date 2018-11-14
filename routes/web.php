@@ -20,5 +20,9 @@ Route::resource('kasie/unitkerja', 'Kasie\UnitKerjaController');
 Route::resource('kasie/pekerjaan', 'Kasie\PekerjaanController');
 Route::resource('kasie/aktifitas', 'Kasie\AktifitasController');
 
+Route::resource('kasie/datausulan', 'Kasie\SwalayanController');
+Route::resource('kasie/task', 'Kasie\TaskController');
+Route::resource('staff/datausulan', 'Staff\SwalayanController');
+
 
 
