@@ -1,33 +1,16 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../assets/js/components/hs.range-datepicker.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
-<script>
-  $(function(){
 
-    $('.js-select').selectpicker();
-  
-      $('.js-select').on('shown.bs.select', function (e) {
-        $(this).addClass('opened');
-      });
-  
-      $('.js-select').on('hidden.bs.select', function (e) {
-        $(this).removeClass('opened');
-      });
-  
-      // initialization of range datepicker
-      $.HSCore.components.HSRangeDatepicker.init('.js-range-datepicker');
-  
-      // initialization of sidebar navigation component
-      $.HSCore.components.HSSideNav.init('.js-side-nav');
-  
-      // initialization of hamburger
-      $.HSCore.helpers.HSHamburgers.init('.hamburger');
-  
-      // initialization of HSDropdown component
-      $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {dropdownHideOnScroll: false});
-  
-      // initialization of custom scrollbar
-      $.HSCore.components.HSScrollBar.init($('.js-custom-scroll'));
+<script type="text/javascript">
+  $(function () {
+    $('#deadline').datetimepicker({
+      format: 'DD-MM-YYYY HH:mm'
+    });
   });
   
 function myFunction() {
@@ -71,7 +54,7 @@ function myFunction() {
             </ul>
           </div>
 
-<form action="/kasie/datausulan/{{$detail_usulan->id}}" method="post">
+<form action="/kasie/usulanstaf/{{$detail_usulan->id}}" method="post">
   <input type="hidden" name="_method" value="put">
           <div class="g-pa-20">
             <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-28">Edit Data Usulan</h1>
@@ -136,19 +119,9 @@ function myFunction() {
 
                   <div class="g-mb-30" id="deadline_show" style="display:none;">
                     <label class="g-mb-10">Deadline</label>
-
-                    <div class="g-brd-around g-brd-gray-light-v7 g-rounded-4 g-pa-20 g-mb-30">
-                      <div class="form-group mb-0 g-max-width-400">
-                        <div id="datepickerWrapper" class="u-datepicker-right u-datepicker--v3 g-pos-rel w-100 g-cursor-pointer g-brd-around g-brd-gray-light-v7 g-rounded-4">
-                          <input class="js-range-datepicker g-bg-transparent g-font-size-12 g-font-size-default--md g-color-gray-dark-v6 g-pr-80 g-pl-15 g-py-9" type="text" placeholder="Select Date" data-rp-wrapper="#datepickerWrapper" data-rp-date-format="d-m-Y" id="deadline" name="deadline">
-                          <div class="d-flex align-items-center g-absolute-centered--y g-right-0 g-color-gray-light-v6 g-color-lightblue-v9--sibling-opened g-mr-15">
-                            <i class="hs-admin-calendar g-font-size-18 g-mr-10"></i>
-                            <i class="hs-admin-angle-down"></i>
-                          </div>
-                        </div>
-                      </div>
+                    <div class='input-group date' >
+                        <input type="text" class="form-control" id="deadline" name="deadline"/>
                     </div>
-
                   </div>
 
                   <div class="g-mb-30" id="pesan_show" style="display:none;">

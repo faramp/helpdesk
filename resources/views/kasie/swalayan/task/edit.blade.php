@@ -2,7 +2,7 @@
 <script>
   function myFunction() {
     var x = document.getElementById("status").value;
-    if(x==5){
+    if(x==7){
       $('#pesan_show').show();
       $('#nilai_show').hide();
     }
@@ -41,8 +41,7 @@
             </ul>
           </div>
 
-<form action="/kasie/task/{{$task->id}}" method="post">
-  <input type="hidden" name="_method" value="put">
+<form action="/kasie/taskstaf/{{$task->id}}" method="post">
           <div class="g-pa-20">
             <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-28">Penilaian Task</h1>
 
@@ -85,9 +84,32 @@
                   </div>
 
                   <div class="g-mb-30">
+                    <label class="g-mb-10">Deadline</label>
+
+                    <div class="g-pos-rel">
+                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                      <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                    </span>
+                      <input id="inputGroup-1_1" name="nama" class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-4 g-px-14 g-py-10" type="text" value="{{date('d-m-Y H:i', strtotime($task->deadline))}}">
+                    </div>                    
+                  </div>
+
+                  <div class="g-mb-30">
+                    <label class="g-mb-10">Waktu Pengerjaan</label>
+
+                    <div class="g-pos-rel">
+                      <span class="g-pos-abs g-top-0 g-right-0 d-block g-width-40 h-100 opacity-0 g-opacity-1--success">
+                      <i class="hs-admin-check g-absolute-centered g-font-size-default g-color-lightblue-v3"></i>
+                    </span>
+                      <input id="inputGroup-1_1" name="nama" class="form-control form-control-md g-brd-gray-light-v7 g-brd-gray-light-v3--focus g-rounded-4 g-px-14 g-py-10" type="text" value="{{$waktu_pengerjaan}}">
+                    </div>                    
+                  </div>
+
+                  <div class="g-mb-30">
                     <label class="g-mb-10">Status</label>
                     <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-4 mb-0">
                       <select class="js-select u-select--v3-select u-sibling w-100" id="status" name="status" required="required" style="display: none;" onchange="myFunction()">
+                        <option value="0"> - Pilih Status - </option>
                         @foreach($status as $s)
                         <option value="{{$s->id}}" data-content='<span class="d-flex align-items-center w-100"><span>{{$s->nama}}</span></span>'>
                           {{$s->nama}}

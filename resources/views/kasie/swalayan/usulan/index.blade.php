@@ -47,7 +47,7 @@
       <tr>
         <th> No</th>
         <th> Ativitas</th>
-        <th> User</th>
+        <th> Staf</th>
         <th> Deskripsi</th>
         <th> Status</th>
         <th> Action</th>
@@ -62,13 +62,17 @@
           <td>{{$du->nama_user}}</td>
           <td>{{$du->deskripsi}}</td>
           <td style="text-align: center">
-              <span class="u-tags-v1 text-center g-width-110 g-brd-around g-brd-teal-v2 g-bg-teal-v2 g-font-weight-400 g-color-white g-rounded-50 g-py-4 g-px-15">{{$du->nama_status}}</span>
+            @if($du->status_id == 3)
+            <a href="#!" class="btn btn-md u-btn-red g-mr-10 g-mb-15">{{$du->nama_status}}</a>
+            @else
+            <a href="#!" class="btn btn-md u-btn-blue g-mr-10 g-mb-15">{{$du->nama_status}}</a>
+            @endif
           </td>
           <td style="text-align: center">
             @if($du->status_id == 1)
-            <a href="/kasie/datausulan/{{$du->id}}"><button type="button" class="btn btn-success" title="detail">Detail</button></a>
+            <a href="/kasie/usulanstaf/{{$du->id}}"><button type="button" class="btn btn-success" title="detail">Detail</button></a>
             @else
-            <a href="/kasie/datausulan/{{$du->id}}"><button type="button" class="btn btn-success" title="detail" disabled="">Detail</button></a>
+            <a href="/kasie/usulanstaf/{{$du->id}}"><button type="button" class="btn btn-success" title="detail" disabled="">Detail</button></a>
             @endif
           </td>
         </tr>

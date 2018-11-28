@@ -60,9 +60,7 @@
   <!-- CSS Customization -->
   <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 
-  <!-- CSS datetime -->
-  <link href="{{asset('assets/vendor/bootstrap-datetimepicker.min.css')}}" rel="stylesheet">
-  
+  <link rel="stylesheet" href="{{asset('datetime/css/bootstrap-material-datetimepicker.css')}}">
 </head>
 
 <body>
@@ -342,7 +340,7 @@
                   </a>
                 </li>
                
-               
+              
                 <li class="mb-0">
                   <a class="media g-color-lightred-v2--hover g-py-5 g-px-20" href="/logout">
                     <span class="d-flex align-self-center g-mr-12">
@@ -737,7 +735,7 @@
         <ul id="sideNavMenu" class="u-sidebar-navigation-v1-menu u-side-nav--top-level-menu g-min-height-100vh mb-0">
 
         <li class="u-sidebar-navigation-v1-menu-item u-side-nav--top-level-menu-item">
-            <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12" href="/kasie/dashboard">
+            <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12" href="/kasubdit/dashboard">
               <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
       <i class="hs-admin-pie-chart"></i>
     </span>
@@ -764,7 +762,7 @@
             <ul id="subMenu8" class="u-sidebar-navigation-v1-menu u-side-nav--second-level-menu mb-0">
               <!-- Basic Tables -->
               <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/beri_intruksi">
+                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasubdit/intruksi/beri_intruksi">
                   <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
           <i class="hs-admin-control-record"></i>
         </span>
@@ -775,7 +773,7 @@
 
               <!-- Table Designs -->
               <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/data_intruksi">
+                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasubdit/intruksi/data_intruksi">
                   <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
           <i class="hs-admin-control-record"></i>
         </span>
@@ -784,20 +782,11 @@
               </li>
 
               <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/izin_bantuan">
+                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasubdit/intruksi/izin_bantuan">
                   <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
           <i class="hs-admin-control-record"></i>
         </span>
                   <span class="media-body align-self-center">Izin Bantuan</span>
-                </a>
-              </li>
-
-               <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/intruksi/perintah_intruksi">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-          <i class="hs-admin-control-record"></i>
-        </span>
-                  <span class="media-body align-self-center">Perintah Intruksi</span>
                 </a>
               </li>
               <!-- End Table Designs -->
@@ -805,70 +794,7 @@
             <!-- End Tables: Submenu-1 -->
           </li>
           <!-- End Tables -->
-         <li class="u-sidebar-navigation-v1-menu-item u-side-nav--has-sub-menu u-side-nav--top-level-menu-item">
-            <a class="media u-side-nav--top-level-menu-link u-side-nav--hide-on-hidden g-px-15 g-py-12" href="#!" data-hssm-target="#subMenu2">
-              <span class="d-flex align-self-center g-pos-rel g-font-size-18 g-mr-18">
-      <i class="hs-admin-desktop"></i>
-    </span>
-              <span class="media-body align-self-center">Swalayan</span>
-              <span class="d-flex align-self-center u-side-nav--control-icon">
-      <i class="hs-admin-angle-right"></i>
-    </span>
-              <span class="u-side-nav--has-sub-menu__indicator"></span>
-            </a>
-
-            <!-- Layouts Settings: Submenu-1 -->
-            <ul id="subMenu2" class="u-sidebar-navigation-v1-menu u-side-nav--second-level-menu mb-0">
-              <!-- Header Static -->
-              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/usulkan">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-                    <i class="hs-admin-control-record"></i>
-                  </span>
-                  <span class="media-body align-self-center">Usulkan Pekerjaan</span>
-                </a>
-              </li>
-
-              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/usulansaya">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-                    <i class="hs-admin-control-record"></i>
-                  </span>
-                  <span class="media-body align-self-center">Data Usulan Saya</span>
-                </a>
-              </li>
-
-              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/usulanstaf">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-                    <i class="hs-admin-control-record"></i>
-                  </span>
-                  <span class="media-body align-self-center">Data Usulan Staf</span>
-                </a>
-              </li>
-              <!-- End Header Static -->
-
-              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/tasksaya">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-                    <i class="hs-admin-control-record"></i>
-                  </span>
-                  <span class="media-body align-self-center">Data Task Saya</span>
-                </a>
-              </li>
-
-              <li class="u-sidebar-navigation-v1-menu-item u-side-nav--second-level-menu-item">
-                <a class="media u-side-nav--second-level-menu-link g-px-15 g-py-12" href="/kasie/taskstaf">
-                  <span class="d-flex align-self-center g-mr-15 g-mt-minus-1">
-                    <i class="hs-admin-control-record"></i>
-                  </span>
-                  <span class="media-body align-self-center">Data Task Staf</span>
-                </a>
-              </li>
-              <!-- End Light Layout: body v.2 -->
-            </ul>
-            <!-- End Layouts Settings: Submenu-1 -->
-          </li>
+         
 
           <!-- End Layouts Settings -->
 
@@ -937,9 +863,7 @@
   <script src="{{asset('admin-template/assets/js/components/hs.popup.js')}}"></script>
   <script src="{{asset('admin-template/assets/js/components/hs.datatables.js')}}"></script>
   
-  <!-- JS datetime -->
-  <script src="{{asset('assets/vendor/moment.js')}}"></script>
-  <script src="{{asset('assets/vendor/bootstrap-datetimepicker.min.js')}}"></script>
+  <script src="{{asset('datetime/js/bootstrap-material-datetimepicker.js')}}"></script>
  
 
 

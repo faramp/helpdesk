@@ -1,4 +1,4 @@
-@extends('kasie.template')
+@extends('staf.template')
 @section('title', 'Tambah Data Usulan')
 @section('content')
 
@@ -8,7 +8,7 @@
             <ul class="u-list-inline g-color-gray-dark-v6">
 
               <li class="list-inline-item g-mr-10">
-                <a class="u-link-v5 g-color-gray-dark-v6 g-color-lightblue-v3--hover g-valign-middle" href="#!">Staff</a>
+                <a class="u-link-v5 g-color-gray-dark-v6 g-color-lightblue-v3--hover g-valign-middle"href="#!">Staf</a>
                 <i class="hs-admin-angle-right g-font-size-12 g-color-gray-light-v6 g-valign-middle g-ml-10"></i>
               </li>
 
@@ -23,7 +23,7 @@
             </ul>
           </div>
 
-<form action="/staff/datausulan" method="post">
+<form action="/staf/usulkan/create" method="post">
           <div class="g-pa-20">
             <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-28">Tambah Data Usulan</h1>
 
@@ -39,16 +39,8 @@
                     <label class="g-mb-10" for="inputGroup-1_1">Nama Pekerjaan</label>
 
                     <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-4 mb-0">
-                      <select class="js-select u-select--v3-select u-sibling w-100" name="pekerjaan" required="required" title="Pilih Pekerjaan" style="display: none;">
-                         @foreach($pekerjaan as $p)
-                        <option value="{{$p->id}}" data-content='<span class="d-flex align-items-center w-100"><span>{{$p->nama}}</span></span>'>{{$p->nama}}
-                        </option>
-                        @endforeach                       
-                      </select>
-
-                      <div class="d-flex align-items-center g-absolute-centered--y g-right-0 g-color-gray-light-v6 g-color-lightblue-v9--sibling-opened g-mr-15">
-                        <i class="hs-admin-angle-down"></i>
-                      </div>
+                      <input type="text" name="pekerjaan" value="{{$detail->id_pekerjaan}}" hidden="">
+                      {{$detail->nama_pekerjaan}}
                     </div>
                   </div>
 
@@ -56,16 +48,16 @@
                     <label class="g-mb-10">Nama Aktifitas</label>
 
                     <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-4 mb-0">
-                      <select class="js-select u-select--v3-select u-sibling w-100" name="aktifitas" required="required" title="Pilih Aktifitas" style="display: none;">
-                         @foreach($aktifitas as $a)
-                        <option value="{{$a->id}}" data-content='<span class="d-flex align-items-center w-100"><span>{{$a->nama}}</span></span>'>{{$a->nama}}
-                        </option>
-                        @endforeach                       
-                      </select>
+                      <input type="text" name="aktifitas" value="{{$detail->id_aktifitas}}" hidden="">
+                      {{$detail->nama_aktifitas}}
+                    </div>
+                  </div>
 
-                      <div class="d-flex align-items-center g-absolute-centered--y g-right-0 g-color-gray-light-v6 g-color-lightblue-v9--sibling-opened g-mr-15">
-                        <i class="hs-admin-angle-down"></i>
-                      </div>
+                  <div class="g-mb-30">
+                    <label class="g-mb-10">Bobot</label>
+
+                    <div class="form-group u-select--v3 g-pos-rel g-brd-gray-light-v7 g-rounded-4 mb-0">
+                      {{$detail->nilai}}
                     </div>
                   </div>
 

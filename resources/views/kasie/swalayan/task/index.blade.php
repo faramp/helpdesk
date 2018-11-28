@@ -1,6 +1,6 @@
 
 @extends('kasie.template')
-@section('title', 'Task')
+@section('title', 'Data Task')
 @section('content')
 
   <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">
@@ -19,7 +19,7 @@
               </li>
 
               <li class="list-inline-item">
-                <span class="g-valign-middle">Task</span>
+                <span class="g-valign-middle">Data Task</span>
               </li>
             </ul>
           </div>
@@ -65,7 +65,15 @@
           <td>{{$t->nama_user}}</td>
           <td>{{$t->deskripsi}}</td>
           <td style="text-align: center">
-                  <span class="u-tags-v1 text-center g-width-110 g-brd-around g-brd-teal-v2 g-bg-teal-v2 g-font-weight-400 g-color-white g-rounded-50 g-py-4 g-px-15">{{$t->nama_status}}</span>
+            @if($t->status_id == 4)
+            <a href="#!" class="btn btn-md u-btn-yellow g-mr-10 g-mb-15">{{$t->nama_status}}</a>
+            @elseif($t->status_id == 5)
+            <a href="#!" class="btn btn-md u-btn-darkgray g-mr-10 g-mb-15">{{$t->nama_status}}</a>
+            @elseif($t->status_id == 6)
+            <a href="#!" class="btn btn-md u-btn-teal g-mr-10 g-mb-15">{{$t->nama_status}}</a>
+            @elseif($t->status_id == 7)
+            <a href="#!" class="btn btn-md u-btn-red g-mr-10 g-mb-15">{{$t->nama_status}}</a>
+            @endif
           </td>   
            <td>
            @if(!empty($t->status_id))
@@ -75,10 +83,10 @@
            @endif
            </td>  
            <td style="text-align: center">
-            @if($t->status_id == 4)
-            <a href="/kasie/task/{{$t->id}}"><button type="button" class="btn btn-success">Nilai</button></a>
+            @if($t->status_id == 5)
+            <a href="/kasie/taskstaf/{{$t->id}}"><button type="button" class="btn btn-success">Nilai</button></a>
             @else
-            <a href="/kasie/task/{{$t->id}}"><button type="button" class="btn btn-success" disabled="">Nilai</button></a>
+            <a href="/kasie/taskstaf/{{$t->id}}"><button type="button" class="btn btn-success" disabled="">Nilai</button></a>
             @endif
            </td>  
         </tr>
